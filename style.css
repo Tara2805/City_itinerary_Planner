@@ -1,0 +1,147 @@
+/*Importing a font from google fonts*/
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap");
+
+/*Applying that font family to entire web app*/
+* {
+  font-family: "Playfair Display", sans-serif;
+}
+
+body {
+  /*Animation effect when user clicks toggle colour theme*/
+  transition: background-color 0.5s ease;
+}
+
+/*dark mode settings*/
+.dark-mode {
+  background-color: #333;
+  color: #fff;
+}
+
+.dark-mode button, .dark-mode .container
+{
+  background-color: #1A7FBD;
+  color: #fff;
+  border:2px solid #fff;
+}
+
+/*My summary is initially hidden */
+#info {
+  display: none;
+}
+
+/*The button to toggle theme css*/
+.switch {
+  top: 20px;
+  right: 20px;
+  max-width: 200px;
+  margin: 0 auto;
+  text-align: center;
+  display: block;
+  margin-bottom: 20px;
+}
+.dark-mode {
+  background-color: #333;
+  color: #fff;
+}
+
+/*'What is this' button css*/
+.info-button {
+  top: 20px;
+  right: 200px;
+}
+/*Web app container css*/
+.container {
+  max-width: 400px;
+  margin: 0 auto;
+  background-color: #c1e3f8;
+  border-radius: 5px;
+  padding: 20px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/*h1 css*/
+h1 {
+  text-align: center;
+}
+
+/*form css*/
+form {
+  margin-top: 20px;
+}
+
+/*label css*/
+label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+/*dropdown styling css*/
+select,
+button {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+}
+
+/*buttons css*/
+button {
+  background-color: #85b9d9;
+  color: #fff;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+/*ensuring submit button is initially disabled*/
+button:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+
+/*adding some on hover button effect css*/
+button:hover:not(:disabled) {
+  background-color: #0056b3;
+}
+
+/*activities list css*/
+#activities {
+  margin-top: 20px;
+}
+
+/*The secondary buttons css*/
+.showImagesBtn,
+.resetBtn {
+  margin-top: 20px;
+  padding: 10px 20px;
+  font-size: 16px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+#showImagesBtn,
+#resetBtn {
+  display: none; /* Hide the buttons by default */
+  max-width: 400px;
+  margin: 0 auto;
+  padding: 20px;
+  margin-top: 20px;
+}
+
+/*images css*/
+#imageContainer {
+  max-width: 400px;
+  margin: 0 auto;
+  padding: 20px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  padding: 10px 20px;
+  overflow: hidden;
+}
+
+#imageContainer img {
+  max-width: 100%; 
+  height: auto; 
+}

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>City itinerary Planner</title>
+    <link rel="stylesheet" href="style.css">
+
+    
+</head>
+<body>
+    <!--Dark theme switch button-->
+<!--Assignment point "Make changes to the html or css using js/use event to trigger a change in the web page"-->
+<button class="switch" onclick="toggleDarkMode()">Toggle 🌙 | ☀️ Mode</button>
+
+<!--What my wep app is contained within -->
+<div class="container">
+  <h1 class="h-Styling">City itinerary Planner</h1>
+
+  <!--When this button is clicked my project summary is shown-->
+  <button class="info-button" onclick="showInfo()">What is this web app?</button>
+
+  <!--A summary of my project-->
+  <div id="info">
+    <p>Don't know what to do in some of the most popular city destinations? Well, we have you covered. Simply choose a city, how you plan to get there and what is your possible budget! We'll compile a list of events you could participate in ⭐</p>
+  </div>
+
+  <!--Destination dropdown box for user input-->
+  <form id="travelForm">
+    <label for="destination">Which city would you like to visit?</label>
+    <select id="destination">
+      <!-- Options will be added dynamically through JavaScript -->
+    </select>  
+
+    <label for="budget">What is your budget?</label><br>
+    <!--Radio buttons for the user to select their budget-->
+    <input type="radio" id="budgetLessThan250" name="budget" value="Less than £250">
+    <label for="budgetLessThan250">Less than £250</label><br>
+    <input type="radio" id="budget250To500" name="budget" value="£250 - £500">
+    <label for="budget250To500">£250 - £500</label><br>
+    <input type="radio" id="budget500To1000" name="budget" value="£500 - £1000">
+    <label for="budget500To1000">£500 - £1000</label><br>
+    <input type="radio" id="budgetMoreThan1000" name="budget" value="More than £1000">
+    <label for="budgetMoreThan1000">More than £1000</label><br>
+    
+     <!--travel dropdown for user input-->
+    <label for="transport">How do you plan to travel?</label>
+    <select id="transport">
+      <!-- Options will be added dynamically through JavaScript -->
+    </select><br><br>
+
+    <!--This button will only be enabled if the user choses an input for all values-->
+    <button id="submitBtn" disabled>Submit</button>
+  </form>
+
+  <!--Based on user input, unique activites will be shown as an orderled list-->
+  <div id="activities"></div>
+
+  <!--If the user hasn't selected anything in 10 seconds these secondary buttons will be shown. Initially they are hidden until the timer event is triggered-->
+  <button id="showImagesBtn" class="hidden">Show Images</button>
+<!--Images for city inspiration-->
+  <div id="imageContainer"></div>
+  <!--Button to hide these images only shown after user clicks to view the images-->
+  <button id="resetBtn" class="hidden">Reset</button>
+</div>
+</div>
+
+
+</body><script src="app.js"></script>
+</html>
